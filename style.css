@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #6a0dad, #000000);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 11px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-color: rgba(0, 0, 0, 0.7); /* Updated */
+    border-radius: 10px;
+}
+
+/* Add this to your existing CSS */
+#status-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    z-index: 1000;
+}
+
+h1 {
+    text-align: center;
+    color: #e600ff;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #f0f0f0;
+}
+
+select, button {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #282828;
+    color: #fff;
+}
+
+button {
+    background-color: #b41db9;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #57006f;
+}
+
+.hidden {
+    display: none;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    pointer-events: none;
+}
+
+.page.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+#loading {
+    text-align: center;
+    font-style: italic;
+}
+
+.track-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    height: 100%;
+}
+
+.track-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1; /* Force square images */
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.track-info {
+    text-align: center;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.track-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 14px;
+    color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.track-info p {
+    margin: 0;
+    font-size: 12px;
+    color: #b3b3b3;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.track-item:hover {
+    transform: scale(1.05);
+}
+
+.playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Force 3 columns */
+    gap: 20px;
+    padding: 20px;
+    max-width: 900px; /* Adjust this value based on your desired overall width */
+    margin: 0 auto;
+}
+
+#back-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #b41db9;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#back-button:hover {
+    background-color: #57006f;
+}
+
+.play-button {
+    padding: 8px 16px;
+    background-color: #250234;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.play-button:hover {
+    background-color: #9b05ce;
+}
+
+.play-button:disabled {
+    background-color: #310202dd;
+    cursor: not-allowed;
+}

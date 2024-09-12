@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Playlist Generator</title>
+    <link rel="shortcut icon" href="Designer (13).png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="status-container">
+        <p id="status">Loading...</p>
+    </div>
+    <div id="preferences-page" style="display: block;">
+        <div class="container">
+            <h1>Personalized Music Playlist Generator</h1>
+            <form id="playlist-form">
+                <label for="mood">Mood:</label>
+                <select id="mood" required>
+                    <option value="happy">Happy</option>
+                    <option value="sad">Sad</option>
+                    <option value="energetic">Energetic</option>
+                    <option value="relaxed">Relaxed</option>
+                </select>
+
+                <label for="genre">Genre:</label>
+                <select id="genre" required>
+                    <option value="pop">Pop</option>
+                    <option value="rock">Rock</option>
+                    <option value="hip-hop">Hip-Hop</option>
+                    <option value="electronic">Electronic</option>
+                </select>
+
+                <label for="activity">Activity:</label>
+                <select id="activity" required>
+                    <option value="workout">Workout</option>
+                    <option value="study">Study</option>
+                    <option value="party">Party</option>
+                    <option value="relax">Relax</option>
+                </select>
+
+                <button type="submit">Generate Playlist</button>
+            </form>
+        </div>
+    </div>
+
+<!-- Replace the existing playlist-page div with this -->
+<div id="playlist-page" style="display: none;">
+    <div class="container">
+        <h1 id="playlist-title">Your Personalized Playlist</h1>
+        <div id="playlist-result" class="playlist-grid"></div>
+        <button id="back-button">Back to Preferences</button>
+    </div>
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
