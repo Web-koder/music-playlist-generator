@@ -3,7 +3,10 @@
 
 let clientId, clientSecret;
 
-if (typeof process !== 'undefined' && process.env) {
+if (typeof window !== 'undefined' && window.ENV) {
+  clientId = window.ENV.SPOTIFY_CLIENT_ID;
+  clientSecret = window.ENV.SPOTIFY_CLIENT_SECRET;
+} else if (typeof process !== 'undefined' && process.env) {
   clientId = process.env.SPOTIFY_CLIENT_ID;
   clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
 } else {
