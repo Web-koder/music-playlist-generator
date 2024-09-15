@@ -1,6 +1,8 @@
 // Replace with your Spotify API credentials
 // require('dotenv').config();
-
+console.log('ENV:', window.ENV);
+console.log('SPOTIFY_CLIENT_ID:', window.ENV.SPOTIFY_CLIENT_ID);
+console.log('SPOTIFY_CLIENT_SECRET (first 5 chars):', window.ENV.SPOTIFY_CLIENT_SECRET ? window.ENV.SPOTIFY_CLIENT_SECRET.substring(0, 5) : 'undefined');
 let clientId, clientSecret;
 
 if (typeof window !== 'undefined' && window.ENV) {
