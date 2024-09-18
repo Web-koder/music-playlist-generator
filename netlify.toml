@@ -1,6 +1,6 @@
-   [build]
-     publish = "."
-     command = ""
+[build]
+  publish = "."
+  command = "node create-env.js"
 
-   [context.production]
-     environment = { NODE_VERSION = "14" }
+[context.production]
+  environment = { NODE_VERSION = "14" }
