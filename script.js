@@ -1,7 +1,18 @@
 // Replace with your Spotify API credentials
 // require('dotenv').config();
-const clientId = config.clientId;
-const clientSecret = config.clientSecret;
+let clientId, clientSecret;
+
+if (typeof window !== 'undefined' && window.ENV) {
+  // Netlify environment
+  clientId = window.ENV.SPOTIFY_CLIENT_ID;
+  clientSecret = window.ENV.SPOTIFY_CLIENT_SECRET;
+} else if (typeof config !== 'undefined') {
+  // Local development
+  clientId = config.clientId;
+  clientSecret = config.clientSecret;
+} else {
+  console.error('Spotify credentials not found');
+}
 
 let accessToken;
 
