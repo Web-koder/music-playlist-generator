@@ -1,20 +1,7 @@
 // Replace with your Spotify API credentials
 // require('dotenv').config();
-console.log('window.ENV exists:', !!window.ENV);
-console.log('ENV:', window.ENV);
-console.log('SPOTIFY_CLIENT_ID:', window.ENV && window.ENV.SPOTIFY_CLIENT_ID);
-console.log('SPOTIFY_CLIENT_SECRET (first 5 chars):', window.ENV && window.ENV.SPOTIFY_CLIENT_SECRET ? window.ENV.SPOTIFY_CLIENT_SECRET.substring(0, 5) : 'undefined');
-let clientId, clientSecret;
-
-if (typeof window !== 'undefined' && window.ENV) {
-  clientId = window.ENV.SPOTIFY_CLIENT_ID;
-  clientSecret = window.ENV.SPOTIFY_CLIENT_SECRET;
-} else if (typeof process !== 'undefined' && process.env) {
-  clientId = process.env.SPOTIFY_CLIENT_ID;
-  clientSecret = process.env.SPOTIFY_CLIENT_SECRET;
-} else {
-  console.error('Spotify credentials not found');
-}
+const clientId = config.clientId;
+const clientSecret = config.clientSecret;
 
 let accessToken;
 
