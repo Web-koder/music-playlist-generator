@@ -2,6 +2,8 @@
 
 This web application generates personalized music playlists based on mood, genre, and activity preferences using the Spotify API.
 
+🌐 See my site here: https://music-mood-matcher.netlify.app/
+
 ## Features
 
 - Generate playlists based on mood, genre, and activity
